@@ -1,16 +1,14 @@
 # WaifuSDK
 
 <div align="center">
-  <img src="assets/banner.jpg" alt="WaifuSDK Banner" width="100%" />
+  <img src="./assets/banner.jpg" alt="WaifuSDK Banner" width="100%" />
 </div>
 
 A TypeScript SDK for interacting with Waifu services. This SDK provides a simple and intuitive interface accessing live and historic data using [@waifusdk/providers](https://github.com/waifusdk/providers).
 
 ## Demo Video
 
-<div align="center">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/Gw7DDG22sT0" title="WaifuSDK Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+https://youtu.be/Gw7DDG22sT0
 
 ## Installation
 
