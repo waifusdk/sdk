@@ -1,23 +1,25 @@
 {
   "name": "@waifusdk/sdk",
   "license": "MIT",
-  "version": "0.0.3",
+  "version": "0.0.6",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsup src/index.ts --format cjs,esm --dts",
-    "release": "pnpm run build && changeset publish",
-    "lint": "tsc"
+    "release": "rm -rf ./dist && pnpm run build && changeset && changeset version && changeset publish",
+    "lint": "tsc",
+    "test": "vitest"
   },
   "dependencies": {
-    "@waifusdk/providers": "^0.0.6"
+    "@waifusdk/providers": "^0.0.8"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.11",
+    "dotenv": "^16.4.7",
     "tsup": "^8.3.5",
     "typescript": "^5.7.3",
-    "vitest": "^3.0.3"
+    "vitest": "^3.0.4"
   },
   "publishConfig": {
     "access": "public"

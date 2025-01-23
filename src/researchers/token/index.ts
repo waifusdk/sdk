@@ -29,19 +29,18 @@ export class TokenResearcher extends BaseResearcher {
   }
 
   async get(input: TokenInput) {
-    const pairData = await this.dexcreenerProvider.getPair(
-      input.chain,
-      input.address
-    );
-
-    const marketData = await this.lunarCrushProvider.getCoin(input.symbol);
-
-    const tweets = await this.twitterProvider.searchTweets(input.symbol);
+    const [pairData, marketData, socialData, tweets] = await Promise.all([
+      this.dexcreenerProvider.getTokenPairs(input.chain, input.address),
+      this.lunarCrushProvider.getCoin(input.symbol),
+      this.lunarCrushProvider.getSocialData(input.symbol),
+      this.twitterProvider.searchTweets(input.symbol),
+    ]);
 
     return {
       pairData,
       marketData,
       tweets,
+      socialData,
     };
   }
 }
