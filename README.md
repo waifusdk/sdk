@@ -31,7 +31,10 @@ const sdk = new WaifuSDK({
 });
 
 // Use the token researcher
-await sdk.token.someMethod();
+await sdk.token.get({
+ id: 1,
+ symbol: "BTC" 
+});
 
 // Use the generic researcher
 await sdk.generic.someMethod();
