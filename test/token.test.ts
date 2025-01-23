@@ -1,7 +1,6 @@
 import { describe, expect, test } from "vitest";
 
 import "dotenv/config";
-import { TokenResearcher } from "../src/researchers/token";
 import { WaifuSDK } from "../src";
 
 describe("TokenResearcher", () => {
