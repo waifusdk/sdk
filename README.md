@@ -1,7 +1,7 @@
 # WaifuSDK
 
 <div align="center">
-  <img src="./assets/banner.jpg" alt="WaifuSDK Banner" width="100%" />
+  <img src="./assets/banner.jpeg" alt="WaifuSDK Banner" width="100%" />
 </div>
 
 A TypeScript SDK for interacting with Waifu services. This SDK provides a simple and intuitive interface accessing live and historic data using [@waifusdk/providers](https://github.com/waifusdk/providers).
@@ -31,7 +31,10 @@ const sdk = new WaifuSDK({
 });
 
 // Use the token researcher
-await sdk.token.someMethod();
+await sdk.token.get({
+ id: 1,
+ symbol: "BTC" 
+});
 
 // Use the generic researcher
 await sdk.generic.someMethod();
